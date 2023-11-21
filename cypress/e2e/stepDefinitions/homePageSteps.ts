@@ -15,27 +15,6 @@ Given("InterceptHomePage flag is set to {string}", (interceptHomePage: ('ON'|'OF
 })
 
 When("User visit Magento Demo Store home page", () => {
-  // cy.once('uncaught:exception', () => false);
-  // catching an exception that is thrown in console by linked website itself - we don't want test to stop here!
-  // Cypress.on('uncaught:exception', (err, runnable) => {
-  //   // we expect a 3rd party library error with message 'list not defined'
-  //   // and don't want to fail the test so we return false
-  //   expect(err.message).to.include(`Cannot read properties of undefined (reading 'indexOf')`);
-  //   if (err.message.includes(`Cannot read properties of undefined (reading 'indexOf')`)) {
-  //     return false
-  //   }
-  //   // we still want to ensure there are no other unexpected
-  //   // errors, so we let them fail the test
-  // });
-  // Workaround for 403 in circleCI
-  // cy.visit("/au/en.html",{
-  //   headers: {
-  //     "Accept" : "application/json, text/plain, */*",
-  //     "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36",
-  //     "LOYALTY-PARTNER-FORWARD": "D19313AA-5BFF-4586-947A-C3AE8D78CEA4"
-  //   }
-  // cy.intercept('GET','https://magento.softwaretestingboard.com').as('fetchStoreHomeMainItem');
-
   if (interceptHomePageStatus === 'ON') {
     cy.disableCache();
     const getMagentoDemoStoreHomePageUrl = 'https://magento.softwaretestingboard.com';
@@ -49,7 +28,6 @@ Then("Web land on the Demo Store home page", () => {
   if (interceptHomePageStatus === 'ON') {  
     cy.wait('@magentoHomePage').its('response.statusCode').should('eq', 200);
   }
-
   cy.title().should('eq', DemoStoreHomePage.homePageTitle);
   cy.url().should("contains", DemoStoreHomePage.homePageUrl);
   cy.log("Land on Magento Demo Store Home page");
