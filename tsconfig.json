@@ -1,0 +1,20 @@
+{
+  "compilerOptions": {
+    "baseUrl": "src",
+    "paths": {
+      "@pages/*": [
+          "./cypress/pages/*"
+      ]
+    },
+    "sourceMap": false,
+    "target": "es2019",
+    "module": "commonjs",
+    "removeComments": true,
+    "noImplicitAny": false,
+    "resolveJsonModule": true,
+    "suppressImplicitAnyIndexErrors": true,
+    "esModuleInterop": true,
+    "types": ["cypress", "@shelex/cypress-allure-plugin", "node", "@4tw/cypress-drag-drop", "cypress-xpath", "cypress-iframe"]
+  },
+  "include": ["src/**/*.cy.{js,ts,jsx,tsx}", "scripts", "backend", "src/__tests__", "cypress.d.ts"]
+}
