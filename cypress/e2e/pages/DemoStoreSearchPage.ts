@@ -12,7 +12,7 @@ class DemoStoreSearchPage extends PageCommonElements  {
     static readonly drivenBackpackStockSku = ".product-info-stock-sku span";
     static readonly drivenBackpackQty = "#qty";
     static readonly addToCartButton = "#product-addtocart-button";
-    static readonly messageSuccessLocator = ".message-success > div";
+    static readonly messageSuccessLocator = "[data-ui-id='message-success'] > div";
     static readonly messageSuccessText = 'You added Driven Backpack to your shopping cart.';
     static readonly showCartCounter = '.counter-number';
     static readonly miniCartWrapper= '.minicart-wrapper';
