@@ -61,4 +61,5 @@ In addition, [A cron job with regression testing](https://app.circleci.com/pipel
 2. User detail data (email address, address, PO number, SKU number, etc) could be persisted and stored into a user-details.json file for later validation / reusing purpose.
 3. Intercepted HomePage HTML response could be stored locally and working as Stubbed response in case needed. This procedure has been implemented for intercepting Search response only at the moment.
 4. Common Page elements verification (e.g. page header, menus items, footer) have only been verified on home page, the same verification could be implemented on other pages if they have the same page elements rendered. Also we can create common verification methold in PageCommonElements.ts.
+5. [A weird failure](https://github.com/hujunhaorobert/cypress-cucumber-automation/issues/1) Element cannot be found in Headless mode in CircleCI. Run in local headless mode, or headed mode, all successful. Need to find solution to solve it. Currently roll back to headed mode as workaround to fix the test failure in CI. 
    
