@@ -42,7 +42,7 @@
 5. Dig into the package.json scripts, you can find more cli to run the test in other mode/combination
    
 
-# 😻 CI Pipeline, test report & test artifacts archive, test result notification
+# 😻 CircleCI Pipeline, test report & test artifacts archive, test result notification (Slack + Twilio SMS)
 CircleCI has been setup for this GitHub project. When a new git commit is pushed and merged, it will trigger workflow:
 
    1. The run-test-and-notify job will be started automatically
