@@ -50,11 +50,15 @@ CircleCI has been setup for this GitHub project. When a new git commit is pushed
    3. Test result notification will be sent to Slack and mobile phone via SMS. Some screenshots for reference.
 
 In addition, [A cron job with regression testing](https://app.circleci.com/pipelines/github/hujunhaorobert/cypress-cucumber-automation) will be triggered with 4 times/day, this is helpful to detect web app avalibility status. It can be customised to run by requested schedule.
-   
 
-### To do list
+<img width="600" alt="Screenshot 2023-11-21 at 8 03 25 pm" src="https://github.com/hujunhaorobert/cypress-cucumber-automation/assets/10079887/870d772b-7638-4369-9971-76818571e856"> 
+<img width="410" alt="Screenshot 2023-11-21 at 7 44 49 pm" src="https://github.com/hujunhaorobert/cypress-cucumber-automation/assets/10079887/e2d2b050-9766-4d56-a960-88d888f90c46">
+<img width="180" alt="Screenshot 2023-11-21 at 7 57 29 pm" src="https://github.com/hujunhaorobert/cypress-cucumber-automation/assets/10079887/904b0d6c-f260-4345-bd64-de493e24e76e">
 
-1. In the E2E test scenario, a user purchase journey happy path was created with the some validation, the purpose is mainly to demo the automation framework extensibility from PoC. We could add more validation on each page, e.g. validate the PO qty / amount /address / notification email received for PO delivery, etc
-    
-2. Persist user detail data (email address, address, PO number, SKU number, etc) and write into a json file for later validation purpose.
+# :pencil: To do list
+
+1. In the E2E test scenario, a user purchase journey happy path was created with the limited validation, the purpose is mainly to demo the automation framework extensibility as a PoC. We could add more validation on each page, e.g. validate the PO qty / amount /address / notification email received for PO delivery, etc
+2. User detail data (email address, address, PO number, SKU number, etc) could be persisted and stored into a user-details.json file for later validation / reusing purpose.
+3. Intercepted HomePage HTML response could be stored locally and working as Stubbed response in case needed. This procedure has been implemented for intercepting Search response only at the moment.
+4. Common Page elements verification (e.g. page header, menus items, footer) have only been verified on home page, the same verification could be implemented on other pages if they have the same page elements rendered. Also we can create common verification methold in PageCommonElements.ts.
    
