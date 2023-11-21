@@ -15,9 +15,10 @@
 
 ### 💻 Pre-requisites
 
-1. Node JS with latest stable version
-2. Optional: Java 8 for Allure Reporter
-3. Optional: [Json-formatter](https://github.com/cucumber/json-formatter) for Native Reporter option(depends on your OS)
+1. [Node JS with latest stable version](https://nodejs.org/en/download)
+2. [Java 8 or above](https://www.java.com/en/download/manual.jsp)
+3. [Allure Reporter](https://allurereport.org/docs/gettingstarted-installation/)
+4. Optional: [Json-formatter](https://github.com/cucumber/json-formatter) for Native Reporter option(depends on your OS)
 
 # 🚀 Install the project locally
 
