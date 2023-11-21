@@ -16,7 +16,7 @@
     "cucumber:clear": "rimraf log npm_install_debug.log reports cucumber-report.html  cypress/videos cypress/screenshots || true",
     "mochawesome:clear": "rimraf cypress/mochawesomeReport cypress/reports cypress/videos cypress-mochawesome-reporter.log || true",
     "allure:clear": "rimraf allure-results/ allure-report cypress/screenshots cypress/videos reports || true",
-    "cypress:multi-report": "DEBUG=cypress:server cypress run --headless --browser chrome --spec \"cypress/e2e/features/*\"",
+    "cypress:multi-report": "DEBUG=cypress:server cypress run --headed --browser chrome --spec \"cypress/e2e/features/*\"",
     "combine:reports": "jrm results.xml \"cypress/results/*.xml\"",
     "cypress:run-allure": "cypress run --spec \"cypress/e2e/features/*\" --env allure=true --headed",
     "cypress:run-allure:headless": "cypress run --env allure=true --spec \"cypress/e2e/features/*\" --browser=chrome || true && npm run allure:report && allure open",
