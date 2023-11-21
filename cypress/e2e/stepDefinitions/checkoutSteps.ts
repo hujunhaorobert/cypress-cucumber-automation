@@ -27,7 +27,8 @@ Then("User click 'Add to Cart' button", () => {
 });
 
 Then("User see add to shopping cart successful message and cart number updated", () => {
-  cy.get(DemoStoreSearchPage.messageSuccessLocator).should('have.text', DemoStoreSearchPage.messageSuccessText);
+  cy.get(DemoStoreSearchPage.messageSuccessLocator).should('be.visible')
+    .should('have.text', DemoStoreSearchPage.messageSuccessText);
   cy.get(DemoStoreSearchPage.showCartCounter).should('have.text', '1');
 });
 
