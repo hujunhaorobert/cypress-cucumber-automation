@@ -24,12 +24,11 @@ Then("User click 'Driven Backpack' image and check details", () => {
 
 Then("User click 'Add to Cart' button", () => {
   cy.get(DemoStoreSearchPage.addToCartButton).click();
-  // cy.get(DemoStoreSearchPage.addToCartButton, {timeout: 10000}).click();
 });
 
 Then("User see add to shopping cart successful message and cart number updated", () => {
-  cy.get(DemoStoreSearchPage.messageSuccessLocator).should('have.text', DemoStoreSearchPage.messageSuccessText);
-  // cy.get(DemoStoreSearchPage.messageSuccessLocator, {timeout: 10000}).should('have.text', DemoStoreSearchPage.messageSuccessText);
+  cy.get(DemoStoreSearchPage.messageSuccessLocator).scrollIntoView().should('be.visible')
+    .should('contain.text', DemoStoreSearchPage.messageSuccessText);
   cy.get(DemoStoreSearchPage.showCartCounter).should('have.text', '1');
 });
 
