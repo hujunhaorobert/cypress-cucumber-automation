@@ -32,6 +32,7 @@ jobs:
           command: apt update && apt install -y jq && apt install curl && curl --version 
       - run:
           name: Run tests
+          parallelism: 2 # Uses 2 parallel instances
           command: npm run cypress:multi-report && npm run combine:reports
       - store_test_results:
           path: results.xml
